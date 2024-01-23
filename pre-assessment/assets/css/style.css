@@ -9,7 +9,7 @@ body {
 	font-size: 16px;
 	line-height: 1.5em;
 	background-image: url("/pre-assessment/assets/img/bg-tile.jpg");
-	background-repeat: repeat;
+	background-repeat: repeat-x;
 	background-position-x: center; 
 	background-color: #171717;
 	
