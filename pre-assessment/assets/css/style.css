@@ -9,8 +9,10 @@ body {
 	font-size: 16px;
 	line-height: 1.5em;
 	background-image: url("/pre-assessment/assets/img/bg-tile.jpg");
+	background-repeat: repeat;
+	background-position-x: center; 
 	background-color: #171717;
-	/*put background img on x-axis*/
+	
 }
 #container {
 	max-width: 800px;
@@ -22,8 +24,19 @@ body {
 	border: 1px solid #CCC;
 }
 #header {
+	background: #FFF;
+
 }
 #header h1 a {
+	display: block;
+	width:800px;
+	height: 140px;
+	background: url("/pre-assessment/assets/img/Header-Name.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 #nav {
 	background-color: #000;
@@ -54,6 +67,18 @@ body {
 	border-bottom-width: 3px;
 	border-bottom-style: solid;
 	border-bottom-color: #CCC;
+}
+.alert{
+	background-color: red;
+}
+h2{
+	color:gray;
+}
+h3{
+	color:#C0C0C0;
+}
+h4{
+	color:#7393B3;
 }
 #content {
 	margin: 20px;
