@@ -1,0 +1,36 @@
+header.primary{
+    display:flex;
+    align-items: center;
+    max-width: 980px;
+    margin: auto;
+    font-size: 50px;
+    text-decoration: underline;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: aliceblue;
+}
+nav{
+    display:flex;
+    align-items: center;
+    max-width: 980px;
+    margin: auto;
+    padding-top: 1rem;
+    transition: all 0.2s ease;
+}
+body{
+    background-color:rgb(0, 0, 0);
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 35px;
+    background-image: url(tumblr_5d37ab2aa782462c7aa092f7bd0d27cb_1690fe1e_1280.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+li{
+    color:rgb(95, 255, 2);
+}
+a{
+    color:rgb(110, 255, 122);
+    text-decoration: none;
+}
+a:hover{
+    color:rgb(0, 238, 255); 
+}
