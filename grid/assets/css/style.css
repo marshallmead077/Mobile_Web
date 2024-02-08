@@ -1,0 +1,45 @@
+html{
+    box-sizing: border-box;
+}
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+main{
+    width:960;
+    margin:20px auto;
+    border: 1px solid #000000;
+    background:url("/grid/assets/img/grid.png");
+}
+header.primary{
+   width:920;
+    float: left;
+    margin:20px;
+    padding:20px;
+  }
+  #blog{
+    background: rgba(0, 0, 0, 0.4);
+    width: 960px;
+    height: 400px;
+    margin-left:20px;
+    margin-top: 150px;
+    padding:20px;
+    float:left
+  }
+  aside{
+    background: rgba(0, 0, 0, 0.3);
+    width: 218px;
+    margin-left:auto;
+    padding:20px;
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+
+  }
+  footer.primary{
+    width:920px;
+    background: rgba(0, 0, 0, 0.3);
+    margin:20px;
+    padding:20px;
+  }

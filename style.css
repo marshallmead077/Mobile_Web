@@ -7,6 +7,8 @@ header.primary{
     text-decoration: underline;
     font-family: 'Pixelify Sans', sans-serif;
     color: aliceblue;
+    -webkit-text-stroke: 3px;
+    -webkit-text-stroke-color: black;
 }
 nav{
     display:flex;
@@ -20,9 +22,11 @@ body{
     background-color:rgb(0, 0, 0);
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 35px;
-    background-image: url(tumblr_5d37ab2aa782462c7aa092f7bd0d27cb_1690fe1e_1280.gif);
+    background: url("/tumblr_5d37ab2aa782462c7aa092f7bd0d27cb_1690fe1e_1280.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
 }
 li{
     color:rgb(95, 255, 2);
