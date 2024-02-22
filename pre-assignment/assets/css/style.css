@@ -8,7 +8,7 @@ body {
 	background-color: #171717;
 	font-size: 16px;
 	line-height: 1.5em;
-	background-image: url("/pre-assignment/assets/img/bg-tile.jpg");
+	background: url("../img/bg-tile.jpg");
 	background-repeat: repeat-x;
 	background-position-x: center; 
 	background-color: #171717;
@@ -31,7 +31,7 @@ body {
 	display: block;
 	width:800px;
 	height: 140px;
-	background: url("/pre-assignment/assets/img/Header-Name.png");
+	background: url("../img/Header-Name.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-indent: 100%;
