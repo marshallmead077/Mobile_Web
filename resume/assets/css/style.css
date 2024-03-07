@@ -1,9 +1,9 @@
-
+/* CSS Custom Properties */
 
 :root{
-  --main-bg-color: #000000;
+  --main-bg-color: #efefef;
   --primary-type-color: #ffffff;
-  --accent-color-1: #2bff00;
+  --accent-color-1: #999999;
 }
 
 
@@ -17,31 +17,24 @@ html {
   box-sizing: inherit;
 }
 
-
+/* ------ Typography -------*/
 body {
   font-family: "PT Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
 }
 
-
+/* ------ Fluid Images -------*/
 img {
-  max-width: 40%;
- display: block;
- margin-left: auto;
- margin-right: auto;
- width: 50%;
- border-radius: 20%;
- 
+  max-width: 100%;
 }
 
-
+/* ------ Utility Classes  -------*/
 .container {
+  max-width: 420px; /* Design Time */
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgb(12, 12, 12);
 }
 
-
+/* ------ Helper Classes -------*/
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -51,15 +44,16 @@ img {
   padding: 0;
   position: absolute;
   width: 1px;
-  white-space: nowrap; 
+  white-space: nowrap; /* 1 */
 }
 
-
+/* ------ Global Styles -------*/
 
 body {
   background: var(--main-bg-color);
   color: var(--primary-type-color);
   line-height: 1.6;
+  
 }
 a:link,
 a:visited {
@@ -86,16 +80,16 @@ nav a:link, nav a:visited {
   border: 1px solid #ffffff;
   text-align: center;
   text-decoration: none;
-  color: #222222;
+  color: #36fa05;
   text-transform: uppercase;
   font-size: 0.75em;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(10, 10, 10, 0.664);
   transition: background-color 0.5s ease;
   color: #ffffff;
 }
 
 nav a:hover {
-  background: rgba(0, 255, 34, 0.95);
+  background: rgba(118, 241, 2, 0.95);
 }
 
 main {
@@ -128,6 +122,7 @@ main h1:after {
 
 dl {
   display: grid;
+  /*shorthand*/
   grid-template: repeat(8, auto) / 8em 1fr;
   font-size:.9rem;
 }
@@ -158,10 +153,10 @@ dd {
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
-  color: #222222;
+  color: #0e0d0d;
   text-transform: uppercase;
   font-size: 0.75em;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(13, 14, 13, 0.95);
   transition: background-color 0.5s ease;
   color: #fff;
 }
@@ -172,9 +167,16 @@ dd {
 }
 
 .related-links a:hover {
-  background: rgba(102, 255, 0, 0.95);
+  background:rgba(118, 241, 2, 0.95);
+
 }
 
+.related-links li {
+
+}
+
+#skills {
+}
 #skills li {
   list-style-type: square;
 }
@@ -200,4 +202,106 @@ dd {
 footer {
   text-align: center;
   padding: 20px 0;
+}
+
+.page-title {
+  grid-area: title;
+}
+#about {
+  grid-area: about;
+}
+#skills {
+  grid-area: skills;
+}
+#experience {
+  grid-area: experience;
+}
+#education {
+  grid-area: education;
+}
+
+main.container{
+  display:grid;
+  grid-template-areas:
+    "title"
+    "about"
+    "education"
+    "experience"
+    "skills"
+    ;
+}
+
+/*----------------------Media Queries-----------------------*/
+
+@media screen and (min-width:768px){
+  
+  .container{
+    max-width:680px;
+  }
+  
+  main.container{
+    display:grid;
+    grid-template-columns: 36.5% auto;
+    grid-template-areas:
+      "title  title"
+      "about  about"
+      "skills experience"
+      "...... education";
+  }
+  
+  /*Nested Grid*/
+  
+  #about{
+    display:grid;
+    grid-template-columns: 250px 1fr auto;
+    gap:2em;
+    grid-template-areas:
+      "bio details details"
+      "related related related"
+  }
+  
+ .bio{
+  grid-area:bio;
+}
+.details{
+  grid-area:details;
+}
+.related-links{
+  grid-area:related;
+    border-bottom:1px solid #f8f6f6;
+  padding-bottom:50px
+  } 
+  
+ dl{
+  display: grid;
+  grid-template-rows:auto;
+  grid-template-columns:8em 1fr;
+  /*shorthand*/
+  grid-template:repeat(7,50px) / 7em 1fr;
+}
+  
+  dd{
+    padding-bottom:0;
+  }
+  
+  
+  
+  
+  
+  
+}
+
+
+/*----------------------Edge Case Tweaks-----------------------*/
+
+
+
+@media only screen and (max-width: 435px) {
+.related-links{
+flex-direction:column;
+
+}
+.related-links a{
+display:block;
+  }  
 }
