@@ -1,98 +1,85 @@
-/* CSS Custom Properties */
-
 :root{
-  --main-bg-color: #efefef;
-  --primary-type-color: #ffffff;
+  --main-bg-color: #000000;
+  --primary-type-color: #36f306;
   --accent-color-1: #999999;
 }
-
 
 
 html {
   box-sizing: border-box;
 }
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
 /* ------ Typography -------*/
-body {
-  font-family: "PT Mono", monospace;
-}
+body{font-family: 'Open Sans', sans-serif;}
 
 /* ------ Fluid Images -------*/
-img {
-  max-width: 100%;
-}
+
+img{max-width:100%;}
 
 /* ------ Utility Classes  -------*/
-.container {
-  max-width: 420px; /* Design Time */
-  margin: 0 auto;
+.container{
+  margin:0 auto;
   background: rgb(12, 12, 12);
+ 
 }
 
 /* ------ Helper Classes -------*/
 .visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap; /* 1 */
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
 }
 
 /* ------ Global Styles -------*/
-
-body {
+body{
   background: var(--main-bg-color);
   color: var(--primary-type-color);
   line-height: 1.6;
-  
-}
-a:link,
-a:visited {
-  color: var(--primary-type-color);
+} 
+a:link, a:visited{
+  color:#1eff00;
 }
 
-nav {
-  padding: 1px;
-}
-
-nav ul {
-  display: grid;
+nav{
+  display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 20px 20px 0px 20px;
+  padding:20px 20px 0px 20px;
 }
-
-nav li {
-  list-style-type: none;
-}
-
-nav a:link, nav a:visited {
-  display: block;
-  padding: 8px 16px;
-  border: 1px solid #ffffff;
-  text-align: center;
-  text-decoration: none;
+nav a:link, nav a:visited{
+  border:1px solid #ffffff;
+  padding:8px 16px;
+  text-align:center;
+  text-decoration:none;
   color: #36fa05;
-  text-transform: uppercase;
-  font-size: 0.75em;
+  text-transform:uppercase;
+  font-size:.75em;
   background: rgba(10, 10, 10, 0.664);
-  transition: background-color 0.5s ease;
+  transition: background-color .5s ease;
   color: #ffffff;
 }
 
-nav a:hover {
+nav a:link:nth-child(1) {
+  border-radius: 0 0 0 20px;
+}
+
+nav a:link:nth-child(4) {
+  border-radius: 0 0 20px 0;
+} 
+
+nav a:hover{
   background: rgba(118, 241, 2, 0.95);
 }
 
-main {
+main{
   padding: 1px 20px;
 }
 
@@ -101,166 +88,201 @@ main h1 {
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  font-weight: 400;
-  font-variant: small-caps;
+  font-weight:400;
+  font-variant:small-caps;
 }
-main h1:before,
-main h1:after {
-  background-color: var(--accent-color-1);
-  content: "\a0";
+main h1:before, main h1:after {
+  background-color: rgba(118, 241, 2, 0.95);
+  content: '\a0';
   flex-grow: 1;
   height: 1px;
   position: relative;
-  top: 1.6rem;
+  top: 0.77em;
 }
 main h1:before {
-  margin-right: 5px;
+  margin-right:15px;
 }
 main h1:after {
-  margin-left: 5px;
+  margin-left:15px;
 }
 
-dl {
+dl{
   display: grid;
   /*shorthand*/
-  grid-template: repeat(8, auto) / 8em 1fr;
-  font-size:.9rem;
+  grid-template:repeat(8,50px) / 8em 1fr;
 }
 
-dt {
-  font-weight: 800;
+dt{
+  font-weight:800;
   grid-column: 1;
   padding: 10px 0;
-  border-bottom: 1px solid var(--accent-color-1);
+  border-bottom:1px solid #999;
+  padding-left: 10px;
 }
-dd {
-  margin: 0;
+
+dd[itemprop="name"] {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+dd[itemprop="nationality"] {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+dd:nth-child(10) {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+dd:nth-child(14) {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+dt:nth-child(1) {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+dt:nth-child(5) {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+dt:nth-child(9) {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+dt:nth-child(13) {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+dd{
+  margin:0;
   grid-column: 2;
   padding: 10px 0;
-  border-bottom: 1px solid var(--accent-color-1);
+  border-bottom:1px solid #999;
+  padding-left: 10px;
+}
+.related-links{
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  padding:0;
+}
+.related-links .svg-inline--fa{
+  font-size:1.8em;
+  padding-top:7px;
 }
 
-.related-links {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  gap:20px;
-}
-
-.related-links a {
-  border: 1px solid var(--accent-color-1);
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  color: #0e0d0d;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  background: rgba(13, 14, 13, 0.95);
+.related-links a{
+  border:1px solid #000;
+  padding:8px 16px;
+  text-align:center;
+  text-decoration:none;
+  color:#222222;
+  text-transform:uppercase;
+  font-size:.75em;
+  background:rgba(0,0,0,.65);
   transition: background-color 0.5s ease;
-  color: #fff;
+  color:#fff;
 }
 
-.related-links .svg-inline--fa {
-  font-size: 1.8em;
-  padding-top: 7px;
+.related-links a:hover{
+  background:rgb(0, 255, 255);
+  color: black;
 }
 
-.related-links a:hover {
-  background:rgba(118, 241, 2, 0.95);
-
+.related-links li{
+  margin-right:20px;
 }
 
-.related-links li {
-
-}
-
-#skills {
+#skills{
+  
 }
 #skills li {
-  list-style-type: square;
+  list-style-type:square;
 }
 
-.job,
-.certificate {
-  border-bottom: 1px solid var(--accent-color-1);
-  padding-bottom: 20px;
+.job, .certificate{
+  border-bottom:1px solid #999;
+  padding-bottom:20px;
 }
 
-.job *[itemprop="jobTitle"],
-.job *[itemprop="name"],
-.job *[itemprop="url"],
+.job *[itemprop="jobTitle"], 
+.job *[itemprop="name"], 
+.job *[itemprop="url"], 
 .job *[itemprop="addressLocality"],
-.certificate *[itemprop="name"] {
-  display: block;
+.certificate *[itemprop="name"]
+{
+  display:block;
 }
 
-.job h3 {
-  margin: 20px 0 0 0;
+.job h3{
+  margin:20px 0 0 0;
 }
 
-footer {
-  text-align: center;
-  padding: 20px 0;
+footer{
+  text-align:center;
+padding:20px 0;
 }
-
-.page-title {
-  grid-area: title;
-}
-#about {
-  grid-area: about;
-}
-#skills {
-  grid-area: skills;
-}
-#experience {
-  grid-area: experience;
-}
-#education {
-  grid-area: education;
-}
+/* Reorder Source Using Grid */
 
 main.container{
-  display:grid;
+  display: grid;
   grid-template-areas:
     "title"
     "about"
-    "education"
     "experience"
-    "skills"
-    ;
+    "education"
+    "skills";
+    background-color: rgba(169, 169, 169, 0.3);
 }
+
+main.container, 
+header.container {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+header.container {
+  border-radius: 20px 20px 0 0;
+}
+
+.page-title{
+  grid-area: title;
+}
+#about{
+  grid-area: about;
+}
+#skills{
+  grid-area: skills;
+}
+#experience{
+  grid-area: experience;
+}
+#education{
+  grid-area: education;
+}
+
 
 /*----------------------Media Queries-----------------------*/
 
 @media screen and (min-width:768px){
-  
-  .container{
-    max-width:680px;
-  }
-  
-  main.container{
-    display:grid;
+
+  main.container {
     grid-template-columns: 36.5% auto;
     grid-template-areas:
-      "title  title"
-      "about  about"
+      "title title"
+      "about about"
       "skills experience"
       "...... education";
   }
   
   /*Nested Grid*/
-  
   #about{
-    display:grid;
-    grid-template-columns: 250px 1fr auto;
-    gap:2em;
-    grid-template-areas:
-      "bio details details"
-      "related related related"
-  }
-  
- .bio{
+  display:grid;
+  grid-gap:2em;
+  grid-template-columns: 250px 1fr auto;
+  grid-template-areas:
+    "bio details details"
+    "related related related";
+}
+.bio{
   grid-area:bio;
 }
 .details{
@@ -268,35 +290,40 @@ main.container{
 }
 .related-links{
   grid-area:related;
-    border-bottom:1px solid #f8f6f6;
+  border-bottom:1px solid #999;
   padding-bottom:50px
-  } 
-  
- dl{
-  display: grid;
-  grid-template-rows:auto;
-  grid-template-columns:8em 1fr;
-  /*shorthand*/
-  grid-template:repeat(7,50px) / 7em 1fr;
 }
-  
-  dd{
-    padding-bottom:0;
+}
+
+@media screen and (min-width:1028px) {
+  main.container {
+    grid-template-columns: 30% auto;
+    grid-template-areas:
+      "title title title"
+      "about about about"
+      "skills education experience"
+      "skills education experience"
+      "skill education experience";
   }
-  
-  
-  
-  
-  
-  
+
+  .certificate:nth-child(2) {
+    border-bottom: none;
+  }
 }
+
+
+
+
 
 
 /*----------------------Edge Case Tweaks-----------------------*/
 
+@media only screen and (max-width: 460px) {
+  .related-links li a svg{display:none;}
+  
+}
 
-
-@media only screen and (max-width: 435px) {
+@media only screen and (max-width: 395px) {
 .related-links{
 flex-direction:column;
 
