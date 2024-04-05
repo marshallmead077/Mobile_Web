@@ -76,14 +76,17 @@ function displayHourlyForecast(hourlyData) {
 
     next24Hours.forEach(item => {
         const dateTime = new Date(item.dt * 1000); // Convert timestamp to milliseconds
-        const hour = dateTime.getHours();
-        const temperature = Math.round((item.main.temp - 273.15) * 9/5 + 32)
+        let hour = dateTime.getHours();
+        const period = hour >= 12 ? 'PM' : 'AM';
+        hour = hour % 12;
+        hour = hour ? hour : 12; // the hour '0' should be '12'
+        const temperature = Math.round((item.main.temp - 273.15) * 9/5 + 32); // Convert to Fahrenheit
         const iconCode = item.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
 
         const hourlyItemHtml = `
             <div class="hourly-item">
-                <span>_${hour}:00</span>
+                <span>${hour}:00 ${period}</span>
                 <img src="${iconUrl}" alt="Hourly Weather Icon">
                 <span>${temperature}°F</span>
             </div>
