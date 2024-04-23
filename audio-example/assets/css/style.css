@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    background: grey;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.audio{
+    width: 100%;
+}
+.hear-video{
+    width: 100%;
+    max-width: 800px;
+}
