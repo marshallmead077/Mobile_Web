@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather Radar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/radar.css">
+</head>
+<body>
+<nav class="navbar">
+        <img src="assets/img/Weather Hub.png" width="100" height="100" alt="">
+    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="radar.html">Radar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Weather Trackers</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<form id="locationForm">
+    <label for="locationInput">Enter Your Location:</label>
+    <input type="text" id="locationInput" placeholder="City, State">
+    <button type="submit">Search</button>
+  </form>
+  <div id="radarContainer">
+    <!-- Radar image will be embedded here -->
+  </div>
+<footer class="footer">
+    <div class="container">
+        <img src="assets/img/openweather-logo-3CE20F48B5-seeklogo.com.png" alt="OpenWeather Logo">
+        <div class="row">
+            <div class="col-sm-12">
+                <h5>Contact Us</h5>
+            </div>
+            <div class="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/radar.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>
