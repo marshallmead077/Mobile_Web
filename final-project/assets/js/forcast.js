@@ -105,3 +105,4 @@ $(document).ready(function(){
         $('.navbar-collapse').toggleClass('active');
     });
 });
+

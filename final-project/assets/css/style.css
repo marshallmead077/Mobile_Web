@@ -142,20 +142,55 @@ input {
 .btn:hover,
 .btn:focus,
 .btn:active {
-  background-color: #ffffff; /* Change this to your preferred hover/focus/active color */
-  border-color: #000000; /* Change this to your preferred hover/focus/active color */
+  background-color: #ffffff; 
+  border-color: #000000; 
 }
 .social {
-  margin-top: 10px; /* Adjust spacing as needed */
+  margin-top: 10px; 
 }
 
 .social a {
-  color: #ffffff; /* Icon color */
-  font-size: 24px; /* Icon size */
-  margin-right: 10px; /* Adjust spacing between icons */
-  text-decoration: none; /* Remove underline */
+  color: #ffffff; 
+  font-size: 24px; 
+  margin-right: 10px; 
+  text-decoration: none; 
 }
 
 .social a:hover {
-  color: #feffff; /* Icon color on hover */
+  color: #feffff; 
+}
+
+
+.navbar-toggler {
+  display: none; 
+}
+
+.navbar-toggler-icon {
+  width: 1.5em; 
+  height: 1.5em;
+  background-color: transparent; /
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: ''; 
+  display: block; 
+  width: 100%; 
+  height: 2px; 
+  background-color: #ffffff; 
+}
+
+/* Media query for toggler button */
+@media only screen and (max-width: 600px) {
+  .navbar-toggler {
+    display: block; 
+    margin-right: 10px; 
+  }
+  
+  .navbar-collapse {
+    display: none; 
+    position: static; 
+    max-height: 0; 
+    overflow: hidden; 
+  }
 }

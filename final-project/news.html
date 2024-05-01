@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Weather Radar</title>
+  <title>Weather Site</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/radar.css">
+  <link rel="stylesheet" href="assets/css/news.css">
 </head>
 <body>
 <nav class="navbar">
@@ -30,13 +30,8 @@
         </ul>
     </div>
 </nav>
-  <div id="radarContainer">
-    <a href="https://www.wunderground.com/radar/us" target="_blank" class="radar-link">
-        <button class="radar-button">Go to Radar</button>
-        <img src="assets/img/radar.png" alt="Radar">
-        
-    </a>
-  </div>
+<div id="fox-weather-news" class="news-container"></div>
+
 <footer class="footer">
     <div class="container">
         <img src="assets/img/openweather-logo-3CE20F48B5-seeklogo.com.png" alt="OpenWeather Logo">
@@ -53,8 +48,7 @@
     </div>
 </footer>
 
-<script src="assets/js/radar.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/news.js"></script> 
 </body>
 </html>
