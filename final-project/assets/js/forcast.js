@@ -100,9 +100,12 @@ function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
     weatherIcon.style.display = 'block'; // Make the image visible once it's loaded
 }
-$(document).ready(function(){
-    $('.navbar-toggler').click(function(){
-        $('.navbar-collapse').toggleClass('active');
-    });
+document.querySelector('.hamburger').addEventListener('click', function() {
+    var menu = document.querySelector('.menu');
+    if (menu.style.display === 'none') {
+        menu.style.display = 'flex';
+    } else {
+        menu.style.display = 'none';
+    }
 });
 

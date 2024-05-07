@@ -86,7 +86,7 @@ h2, label, p {
   color: #05e1ff;
 }
 .footer {
-  position: fixed;
+  margin-top: 95px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -111,4 +111,40 @@ h2, label, p {
 
 .social a:hover {
   color: #feffff; /* Icon color on hover */
+}
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: #05e1ff;
+  width: 100%;
+  z-index: 10;
+}
+
+.menu a {
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+  }
 }

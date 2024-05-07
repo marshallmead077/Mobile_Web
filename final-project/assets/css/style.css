@@ -116,7 +116,7 @@ input {
   margin-top: 10px;
 }
 .footer {
-  position: fixed;
+  margin-top: 95px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -159,38 +159,39 @@ input {
 .social a:hover {
   color: #feffff; 
 }
-
-
-.navbar-toggler {
-  display: none; 
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: #05e1ff;
+  width: 100%;
+  z-index: 1000;
 }
 
-.navbar-toggler-icon {
-  width: 1.5em; 
-  height: 1.5em;
-  background-color: transparent; /
+.menu a {
+  color: black;
+  padding: 15px;
+  text-decoration: none;
 }
 
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: ''; 
-  display: block; 
-  width: 100%; 
-  height: 2px; 
-  background-color: #ffffff; 
+.menu a:hover {
+  opacity: 0.7;
 }
 
-/* Media query for toggler button */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 25px;
+}
+
 @media only screen and (max-width: 600px) {
-  .navbar-toggler {
-    display: block; 
-    margin-right: 10px; 
+  .hamburger {
+    display: block;
   }
-  
+
   .navbar-collapse {
-    display: none; 
-    position: static; 
-    max-height: 0; 
-    overflow: hidden; 
+    display: none;
   }
 }
